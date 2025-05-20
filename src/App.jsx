@@ -25,6 +25,7 @@ import TableView_ResourceD from "./components/TableView_ResourceD";
 import TableView_FresubinDM from "./components/TableView_FresubinDM";
 import TableView_PentasureDM from "./components/TableView_PentasureDM";
 import QuestionPatternM4 from "./components/QuestionPatternM4";
+import ThankYou from "./components/ThankYou";
 import MisStatus from "./components/MisStatus";
 import Dashboard from "./components/dashboard";
 import "./App.css";
@@ -35,8 +36,8 @@ function App() {
       {/* <Login /> */}
       <Header />
       <section className="h-[90%] w-full p-4">
-        <Dashboard />
-        {/* <div
+        {/* <Dashboard /> */}
+        <div
           className="h-full w-full bg-center bg-cover rounded-xl flex sm:flex-row flex-col justify-around p-4 overflow-auto sm:border-none border-2 border-[#5224b5]"
           style={{
             backgroundImage: `url(${bgImgD})`,
@@ -45,32 +46,33 @@ function App() {
               backgroundImage: `url(${bgImgM})`,
             },
           }}
-        > */}
-        {/* <QuestionPatternSa /> */}
-        {/* <QuestionPatternSb /> */}
-        {/* <QuestionPatternM1 /> */}
-        {/* <QuestionPatternM2 /> */}
-        {/* <QuestionPatternM3_Ensure /> */}
-        {/* <QuestionPatternM3_ProhanceD /> */}
-        {/* <QuestionPatternM3_ProtinexD /> */}
-        {/* <QuestionPatternM3_DProtin /> */}
-        {/* <QuestionPatternM3_HorlicksD /> */}
-        {/* <QuestionPatternM3_Celevida /> */}
-        {/* <QuestionPatternM3_ResourceD /> */}
-        {/* <QuestionPatternM3_FresubinDM /> */}
-        {/* <QuestionPatternM3_PentasureDM /> */}
-        {/* <TableView_Ensure /> */}
-        {/* <TableView_ProhanceD /> */}
-        {/* <TableView_ProtinexD /> */}
-        {/* <TableView_DProtin /> */}
-        {/* <TableView_HorlicksD /> */}
-        {/* <TableView_Celevida /> */}
-        {/* <TableView_ResourceD /> */}
-        {/* <TableView_FresubinDM /> */}
-        {/* <TableView_PentasureDM /> */}
-        {/* <QuestionPatternM4 /> */}
-        {/* <MisStatus /> */}
-        {/* </div> */}
+        >
+          {/* <QuestionPatternSa /> */}
+          {/* <QuestionPatternSb /> */}
+          {/* <QuestionPatternM1 /> */}
+          {/* <QuestionPatternM2 /> */}
+          {/* <QuestionPatternM3_Ensure /> */}
+          {/* <QuestionPatternM3_ProhanceD /> */}
+          {/* <QuestionPatternM3_ProtinexD /> */}
+          {/* <QuestionPatternM3_DProtin /> */}
+          {/* <QuestionPatternM3_HorlicksD /> */}
+          {/* <QuestionPatternM3_Celevida /> */}
+          {/* <QuestionPatternM3_ResourceD /> */}
+          {/* <QuestionPatternM3_FresubinDM /> */}
+          {/* <QuestionPatternM3_PentasureDM /> */}
+          {/* <TableView_Ensure /> */}
+          {/* <TableView_ProhanceD /> */}
+          {/* <TableView_ProtinexD /> */}
+          {/* <TableView_DProtin /> */}
+          {/* <TableView_HorlicksD /> */}
+          {/* <TableView_Celevida /> */}
+          {/* <TableView_ResourceD /> */}
+          {/* <TableView_FresubinDM /> */}
+          {/* <TableView_PentasureDM /> */}
+          {/* <QuestionPatternM4 /> */}
+          <ThankYou />
+          {/* <MisStatus /> */}
+        </div>
       </section>
     </div>
   );
