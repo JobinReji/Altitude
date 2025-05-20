@@ -95,27 +95,27 @@ function FilterData({ selectId, options }) {
 
 export default function Dashboard() {
   return (
-    <div className="w-full h-full flex flex-col items-center">
+    <div className="w-full h-full flex flex-col items-center overflow-y-auto sm:overflow-y-hidden">
       <div className="flex sm:flex-row flex-col justify-around w-[90%] h-auto text-[#5224b5]">
-        <div className="sm:min-w-[15%] w-full pb-3">
+        <div className="sm:w-[15%] w-full pb-3">
           <div className="text-center">
             <label>State</label>
           </div>
           <FilterData selectId="D_1" options={options_1} />
         </div>
-        <div className="sm:min-w-[15%] w-full">
+        <div className="sm:w-[15%] w-full pb-3">
           <div className="text-center">
             <label>City</label>
           </div>
           <FilterData selectId="D_2" options={options_2} />
         </div>
-        <div className="sm:min-w-[15%] w-full">
+        <div className="sm:w-[15%] w-full pb-3">
           <div className="text-center">
             <label>Type of City</label>
           </div>
           <FilterData selectId="D_3" options={options_3} />
         </div>
-        <div className="sm:min-w-[15%] w-full">
+        <div className="sm:w-[15%] w-full pb-3">
           <div className="text-center">
             <label>HCP Speciality</label>
           </div>
@@ -123,7 +123,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="w-[96%] flex-1 overflow-x-hidden overflow-y-auto flex flex-col">
-        <div className="flex sm:flex-row flex-col justify-between flex-1 my-2 min-h-[300px]">
+        <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between flex-1 my-2 min-h-[300px]">
           <div className="sm:w-[30%] w-full h-full bg-violet-800/10 rounded-xl">
             <div className="text-center text-[#5224b5] font-semibold py-2">
               Zone
@@ -137,7 +137,7 @@ export default function Dashboard() {
             <State />
           </div>
         </div>
-        <div className="flex justify-between flex-1 my-2 min-h-[300px]">
+        <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between flex-1 my-2 min-h-[300px]">
           <div className="sm:w-[68%] w-full h-full bg-violet-800/10 rounded-xl">
             <div className="text-center text-[#5224b5] font-semibold py-2">
               City
@@ -151,7 +151,7 @@ export default function Dashboard() {
             <TypeOfCity />
           </div>
         </div>
-        <div className="flex justify-between flex-1 my-2 min-h-[300px]">
+        <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between flex-1 my-2 min-h-[300px]">
           <div className="sm:w-[30%] w-full h-full bg-violet-800/10 rounded-xl">
             <div className="text-center text-[#5224b5] font-semibold py-2">
               Core/ Supercore
@@ -165,8 +165,8 @@ export default function Dashboard() {
             <HCPSpeciality />
           </div>
         </div>
-        <div className="flex justify-between flex-1 my-2 min-h-[300px]">
-          <div className="w-[30%] h-full bg-violet-800/10 rounded-xl flex justify-around items-center text-[#5224b5]">
+        <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between flex-1 my-2 min-h-[300px]">
+          <div className="sm:w-[30%] w-full h-full bg-violet-800/10 rounded-xl flex justify-around items-center text-[#5224b5]">
             <div className="flex flex-col items-center gap-2">
               <img src={hospitalImg} className="w-[50%]" alt="Hospital Image" />
               <div className="text-sm">Hospital</div>
@@ -178,7 +178,7 @@ export default function Dashboard() {
               <div className="text-2xl font-semibold">87%</div>
             </div>
           </div>
-          <div className="w-[68%] h-full bg-violet-800/10 rounded-xl">
+          <div className="sm:w-[68%] w-full h-full bg-violet-800/10 rounded-xl">
             <div className="text-center text-[#5224b5] font-semibold py-2">
               HQ of Client
             </div>

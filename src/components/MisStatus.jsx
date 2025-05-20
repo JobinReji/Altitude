@@ -1,4 +1,5 @@
 import ReactECharts from "echarts-for-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function MisStatus() {
   return (
     <div className="w-full sm:w-[90%] p-1 rounded-md overflow-auto sm-tab">
@@ -128,6 +129,20 @@ export default function MisStatus() {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className="fixed p-2 bg-[#5224b5] text-white rounded-full cursor-pointer"
+        style={{ top: "50%", left: "20px", transform: "translate(-50%,0%)" }}
+        title="Previous"
+      >
+        <ChevronLeft />
+      </div>
+      <div
+        className="fixed p-2 bg-[#5224b5] text-white rounded-full cursor-pointer"
+        style={{ top: "50%", right: "-20px", transform: "translate(-50%,0%)" }}
+        title="Next"
+      >
+        <ChevronRight />
       </div>
     </div>
   );
