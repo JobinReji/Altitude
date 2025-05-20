@@ -95,94 +95,120 @@ function FilterData({ selectId, options }) {
 
 export default function Dashboard() {
   return (
-    <div className="w-full h-full flex flex-col items-center overflow-y-auto sm:overflow-y-hidden">
-      <div className="flex sm:flex-row flex-col justify-around w-[90%] h-auto text-[#5224b5]">
-        <div className="sm:w-[15%] w-full pb-3">
-          <div className="text-center">
-            <label>State</label>
+    <div className="w-full h-screen flex flex-col items-center">
+      {/* Filter section - compact on mobile */}
+      <div className="sticky top-0 z-10 bg-white sm:static sm:bg-transparent sm:flex sm:justify-around w-full sm:w-[90%] h-auto text-[#5224b5] px-2 sm:px-0 py-2 sm:py-0">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-8 sm:w-full">
+          <div className="pb-1 sm:pb-3">
+            <div className="text-center text-sm sm:text-base">
+              <label>State</label>
+            </div>
+            <FilterData selectId="D_1" options={options_1} />
           </div>
-          <FilterData selectId="D_1" options={options_1} />
-        </div>
-        <div className="sm:w-[15%] w-full pb-3">
-          <div className="text-center">
-            <label>City</label>
+          <div className="pb-1 sm:pb-3">
+            <div className="text-center text-sm sm:text-base">
+              <label>City</label>
+            </div>
+            <FilterData selectId="D_2" options={options_2} />
           </div>
-          <FilterData selectId="D_2" options={options_2} />
-        </div>
-        <div className="sm:w-[15%] w-full pb-3">
-          <div className="text-center">
-            <label>Type of City</label>
+          <div className="pb-1 sm:pb-3">
+            <div className="text-center text-sm sm:text-base">
+              <label>Type of City</label>
+            </div>
+            <FilterData selectId="D_3" options={options_3} />
           </div>
-          <FilterData selectId="D_3" options={options_3} />
-        </div>
-        <div className="sm:w-[15%] w-full pb-3">
-          <div className="text-center">
-            <label>HCP Speciality</label>
+          <div className="pb-1 sm:pb-3">
+            <div className="text-center text-sm sm:text-base">
+              <label>HCP Speciality</label>
+            </div>
+            <FilterData selectId="D_4" options={options_4} />
           </div>
-          <FilterData selectId="D_4" options={options_4} />
         </div>
       </div>
-      <div className="w-[96%] flex-1 overflow-x-hidden overflow-y-auto flex flex-col">
-        <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between flex-1 my-2 min-h-[300px]">
-          <div className="sm:w-[30%] w-full h-full bg-violet-800/10 rounded-xl">
-            <div className="text-center text-[#5224b5] font-semibold py-2">
+
+      {/* Charts section - takes remaining space */}
+      <div className="flex-1 overflow-auto p-2 sm:p-4 sm:max-h-[75vh] max-h-[60vh] w-full">
+        {/* First row */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-4 h-[80vh] w-full min-h-[300px] sm:h-[35vh]">
+          <div className="flex-1 sm:flex-none bg-violet-800/10 rounded-xl p-2 sm:w-[30%] w-full">
+            <div className="text-center text-[#5224b5] font-semibold py-1">
               Zone
             </div>
-            <Zone />
+            <div className="h-[calc(100%-40px)]">
+              <Zone />
+            </div>
           </div>
-          <div className="sm:w-[68%] w-full h-full bg-violet-800/10 rounded-xl">
-            <div className="text-center text-[#5224b5] font-semibold py-2">
+          <div className="flex-1 sm:flex-none bg-violet-800/10 rounded-xl p-2 sm:w-[68%] w-full">
+            <div className="text-center text-[#5224b5] font-semibold py-1">
               State
             </div>
-            <State />
+            <div className="h-[calc(100%-40px)]">
+              <State />
+            </div>
           </div>
         </div>
-        <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between flex-1 my-2 min-h-[300px]">
-          <div className="sm:w-[68%] w-full h-full bg-violet-800/10 rounded-xl">
-            <div className="text-center text-[#5224b5] font-semibold py-2">
+
+        {/* Second row */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-4 h-[80vh] w-full min-h-[300px] sm:h-[35vh]">
+          <div className="flex-1 sm:flex-none bg-violet-800/10 rounded-xl p-2 sm:w-[68%] w-full">
+            <div className="text-center text-[#5224b5] font-semibold py-1">
               City
             </div>
-            <City />
+            <div className="h-[calc(100%-40px)]">
+              <City />
+            </div>
           </div>
-          <div className="sm:w-[30%] w-full h-full bg-violet-800/10 rounded-xl">
-            <div className="text-center text-[#5224b5] font-semibold py-2">
+          <div className="flex-1 sm:flex-none bg-violet-800/10 rounded-xl p-2 sm:w-[30%] w-full">
+            <div className="text-center text-[#5224b5] font-semibold py-1">
               Type of City
             </div>
-            <TypeOfCity />
+            <div className="h-[calc(100%-40px)]">
+              <TypeOfCity />
+            </div>
           </div>
         </div>
-        <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between flex-1 my-2 min-h-[300px]">
-          <div className="sm:w-[30%] w-full h-full bg-violet-800/10 rounded-xl">
-            <div className="text-center text-[#5224b5] font-semibold py-2">
-              Core/ Supercore
+
+        {/* Third row */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-4 h-[80vh] w-full min-h-[300px] sm:h-[35vh]">
+          <div className="flex-1 sm:flex-none bg-violet-800/10 rounded-xl p-2 sm:w-[30%] w-full">
+            <div className="text-center text-[#5224b5] font-semibold py-1">
+              Core/Supercore
             </div>
-            <CoreSupercore />
+            <div className="h-[calc(100%-40px)]">
+              <CoreSupercore />
+            </div>
           </div>
-          <div className="sm:w-[68%] w-full h-full bg-violet-800/10 rounded-xl">
-            <div className="text-center text-[#5224b5] font-semibold py-2">
+          <div className="flex-1 sm:flex-none bg-violet-800/10 rounded-xl p-2 sm:w-[68%] w-full">
+            <div className="text-center text-[#5224b5] font-semibold py-1">
               HCP Speciality
             </div>
-            <HCPSpeciality />
+            <div className="h-[calc(100%-40px)]">
+              <HCPSpeciality />
+            </div>
           </div>
         </div>
-        <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between flex-1 my-2 min-h-[300px]">
-          <div className="sm:w-[30%] w-full h-full bg-violet-800/10 rounded-xl flex justify-around items-center text-[#5224b5]">
-            <div className="flex flex-col items-center gap-2">
-              <img src={hospitalImg} className="w-[50%]" alt="Hospital Image" />
-              <div className="text-sm">Hospital</div>
-              <div className="text-2xl font-semibold">76%</div>
+
+        {/* Fourth row */}
+        <div className="flex flex-col sm:flex-row gap-4 h-[80vh] min-h-[300px] sm:h-[35vh]">
+          <div className="flex-1 sm:flex-none bg-violet-800/10 rounded-xl p-4 flex flex-col sm:flex-row justify-center items-center gap-4 sm:w-[30%] w-full">
+            <div className="flex flex-col items-center">
+              <img src={hospitalImg} className="w-16 sm:w-20" alt="Hospital" />
+              <div className="text-sm mt-2">Hospital</div>
+              <div className="text-2xl font-bold mt-1">76%</div>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <img src={clinicImg} className="w-[50%]" alt="Clinic Image" />
-              <div className="text-sm">Clinic</div>
-              <div className="text-2xl font-semibold">87%</div>
+            <div className="flex flex-col items-center">
+              <img src={clinicImg} className="w-16 sm:w-20" alt="Clinic" />
+              <div className="text-sm mt-2">Clinic</div>
+              <div className="text-2xl font-bold mt-1">87%</div>
             </div>
           </div>
-          <div className="sm:w-[68%] w-full h-full bg-violet-800/10 rounded-xl">
-            <div className="text-center text-[#5224b5] font-semibold py-2">
+          <div className="flex-1 sm:flex-none bg-violet-800/10 rounded-xl p-2 sm:w-[68%] w-full">
+            <div className="text-center text-[#5224b5] font-semibold py-1">
               HQ of Client
             </div>
-            <HQOfClient />
+            <div className="h-[calc(100%-40px)]">
+              <HQOfClient />
+            </div>
           </div>
         </div>
       </div>
