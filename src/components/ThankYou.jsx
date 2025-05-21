@@ -5,7 +5,7 @@ export default function ThankYou() {
       <div className="h-full flex justify-center">
         <img
           src={ThankYouImage}
-          className="sm:w-[40%] w-full"
+          className="sm:w-[50%] w-full"
           alt="Thank you :)"
         />
       </div>

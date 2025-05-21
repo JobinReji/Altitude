@@ -28,6 +28,7 @@ import QuestionPatternM4 from "./components/QuestionPatternM4";
 import ThankYou from "./components/ThankYou";
 import MisStatus from "./components/MisStatus";
 import Dashboard from "./components/dashboard";
+import Dashboard2 from "./components/Dashboard2";
 import "./App.css";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Header />
       <section className="h-[90%] w-full p-4">
         {/* <Dashboard /> */}
+        {/* <Dashboard2 /> */}
         <div
           className="h-full w-full bg-center bg-cover rounded-xl flex sm:flex-row flex-col justify-around p-4 overflow-auto sm:border-none border-2 border-[#5224b5]"
           style={{
