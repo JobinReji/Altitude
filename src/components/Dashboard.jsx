@@ -1,5 +1,6 @@
 import Select from "react-select";
 import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import hospitalImg from "../assets/hospital_img.png";
 import clinicImg from "../assets/clinic_img.png";
 import {
@@ -211,6 +212,21 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        className="fixed p-2 bg-[#5224b5] text-white rounded-full cursor-pointer"
+        style={{ top: "50%", left: "20px", transform: "translate(-50%,0%)" }}
+        title="Previous"
+      >
+        <ChevronLeft />
+      </div>
+      <div
+        className="fixed p-2 bg-[#5224b5] text-white rounded-full cursor-pointer"
+        style={{ top: "50%", right: "-20px", transform: "translate(-50%,0%)" }}
+        title="Next"
+      >
+        <ChevronRight />
       </div>
     </div>
   );
