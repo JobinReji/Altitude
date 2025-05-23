@@ -35,6 +35,11 @@ function HQOfClient() {
     <ReactECharts option={option7} style={{ height: "100%", width: "100%" }} />
   );
 }
+function DistanceDistribution() {
+  return (
+    <ReactECharts option={option8} style={{ height: "100%", width: "100%" }} />
+  );
+}
 
 const option1 = {
   tooltip: {
@@ -505,6 +510,54 @@ const option7 = {
   ],
 };
 
+const option8 = {
+  legend: {
+    top: "bottom",
+    textStyle: {
+      fontSize: 10, // 👈 Smaller legend text
+    },
+  },
+  toolbox: {
+    show: true,
+    // feature: {
+    //   mark: { show: true },
+    //   dataView: { show: true, readOnly: false },
+    //   restore: { show: true },
+    //   saveAsImage: { show: true },
+    // },
+  },
+  series: [
+    {
+      name: "Nightingale Chart",
+      type: "pie",
+      radius: ["15%", "60%"],
+      center: ["50%", "40%"],
+      roseType: "area",
+      itemStyle: {
+        borderRadius: 8,
+      },
+      label: {
+        show: true,
+        position: "outside", // Place label outside the slices
+        formatter: "{b}: {d}%", // Show name and percentage
+        color: "#000000", // Use black or a visible color
+        fontSize: 12,
+      },
+      labelLine: {
+        show: true, // Show connecting lines
+        length: 15,
+        length2: 10,
+      },
+      data: [
+        { value: 35, name: "Front" },
+        { value: 30, name: "Distant" },
+        { value: 25, name: "Adjacent" },
+        { value: 20, name: "Within Campus" },
+      ],
+    },
+  ],
+};
+
 export {
   Zone,
   State,
@@ -513,4 +566,5 @@ export {
   CoreSupercore,
   HCPSpeciality,
   HQOfClient,
+  DistanceDistribution,
 };

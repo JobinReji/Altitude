@@ -12,23 +12,23 @@ import {
   HQOfClient,
 } from "./DashCharts";
 
-const options_1 = [
+const state = [
   { value: "Karnataka", label: "Karnataka" },
   { value: "Goa", label: "Goa" },
   { value: "Maharastra", label: "Maharastra" },
   { value: "Delhi", label: "Delhi" },
 ];
-const options_2 = [
+const city = [
   { value: "Bangaluru", label: "Bangaluru" },
   { value: "Mangaluru", label: "Mangaluru" },
   { value: "Mumbai", label: "Mumbai" },
   { value: "Pune", label: "Pune" },
 ];
-const options_3 = [
+const typeOfCity = [
   { value: "City", label: "City" },
   { value: "Village", label: "Village" },
 ];
-const options_4 = [
+const hcp = [
   { value: "Yes", label: "Yes" },
   { value: "No", label: "No" },
 ];
@@ -103,25 +103,25 @@ export default function Dashboard() {
             <div className="text-center text-sm sm:text-base">
               <label>State</label>
             </div>
-            <FilterData selectId="D_1" options={options_1} />
+            <FilterData selectId="D_1" options={state} />
           </div>
           <div className="pb-1 sm:pb-3">
             <div className="text-center text-sm sm:text-base">
               <label>City</label>
             </div>
-            <FilterData selectId="D_2" options={options_2} />
+            <FilterData selectId="D_2" options={city} />
           </div>
           <div className="pb-1 sm:pb-3">
             <div className="text-center text-sm sm:text-base">
               <label>Type of City</label>
             </div>
-            <FilterData selectId="D_3" options={options_3} />
+            <FilterData selectId="D_3" options={typeOfCity} />
           </div>
           <div className="pb-1 sm:pb-3">
             <div className="text-center text-sm sm:text-base">
               <label>HCP Speciality</label>
             </div>
-            <FilterData selectId="D_4" options={options_4} />
+            <FilterData selectId="D_4" options={hcp} />
           </div>
         </div>
       </div>

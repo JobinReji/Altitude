@@ -8,9 +8,9 @@
   }
 }
 
-html {
+/* html {
   overflow: hidden;
-}
+} */
 
 .nav-btn {
   background-color: transparent;
@@ -22,7 +22,7 @@ html {
 }
 
 .mis_tab tbody tr {
-  border-bottom: 1px solid #132f62;
+  border-bottom: 1px solid #5224b5;
 }
 .mis_tab tbody tr:last-child {
   border-bottom: none;
@@ -40,4 +40,27 @@ html {
   position: sticky;
   top: 0;
   z-index: 10;
+  box-shadow: 0px 2px 0px #5224b5;
+}
+
+/* .dash_tab tbody tr {
+  border-bottom: 1px solid #5224b5;
+} */
+.dash_tab tbody tr:last-child {
+  border-bottom: none;
+}
+.dash_tab thead th {
+  padding: 5px 0;
+  max-width: 5vw;
+}
+.dash_tab tbody td {
+  padding: 5px 0;
+  width: 5vw;
+}
+.dash_tab thead {
+  background-color: #eeeaf8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 2px 0px #5224b5;
 }
