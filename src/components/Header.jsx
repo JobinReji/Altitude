@@ -4,7 +4,7 @@ import logout from "../assets/logout.png";
 
 export default function Header() {
   return (
-    <header className="flex justify-between h-[10%] items-center sticky top-0 right-0 w-full">
+    <header className="flex justify-between h-[10%] items-center sticky top-0 right-0 w-full z-50 bg-white">
       <div className="w-[80%] h-[70%] bg-[#5224B5] rounded-r-full flex justify-between items-center">
         <div className="pl-2 w-[30%]">
           <img
