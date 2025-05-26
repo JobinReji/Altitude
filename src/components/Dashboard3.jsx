@@ -148,7 +148,7 @@ export default function Dashboard3() {
             <div>Tier 2</div>
             <div>n=34</div>
           </div>
-          <div className="sm:w-[12.5%] min-w-[200px] flex flex-col justify-center items-center py-2 font-semibold border-b-2 bg-[#E9E3F6]">
+          <div className="sm:w-[12.5%] min-w-[200px] flex flex-col justify-center items-center py-2 font-semibold border-b-2 border-[#5224B5] bg-[#E9E3F6]">
             <div>Others</div>
             <div>n=25</div>
           </div>
@@ -176,6 +176,20 @@ export default function Dashboard3() {
             <BrandAdoption data={[30, 25, 20, 15, 10, 8, 5, 3, 1]} />
           </div>
         </div>
+      </div>
+      <div
+        className="fixed p-2 bg-[#5224b5] text-white rounded-full cursor-pointer z-50"
+        style={{ top: "50%", left: "20px", transform: "translate(-50%,0%)" }}
+        title="Previous"
+      >
+        <ChevronLeft />
+      </div>
+      <div
+        className="fixed p-2 bg-[#5224b5] text-white rounded-full cursor-pointer z-50"
+        style={{ top: "50%", right: "-20px", transform: "translate(-50%,0%)" }}
+        title="Next"
+      >
+        <ChevronRight />
       </div>
     </div>
   );
