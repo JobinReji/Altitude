@@ -40,6 +40,16 @@ function DistanceDistribution() {
     <ReactECharts option={option8} style={{ height: "100%", width: "100%" }} />
   );
 }
+function BrandAdoptionL() {
+  return (
+    <ReactECharts option={option9} style={{ height: "100%", width: "100%" }} />
+  );
+}
+function BrandAdoption() {
+  return (
+    <ReactECharts option={option10} style={{ height: "100%", width: "100%" }} />
+  );
+}
 
 const option1 = {
   tooltip: {
@@ -554,6 +564,109 @@ const option8 = {
   ],
 };
 
+// Table chart only label
+
+const option9 = {
+  xAxis: {
+    type: "value",
+    show: false,
+    max: 80,
+  },
+  yAxis: {
+    type: "category",
+    data: [
+      "Ensure Diabetes Care (Abbott)",
+      "Prohance D (Sun Pharma)",
+      "Protinex Diabetes Care (Danone-Nutricia)",
+      "D-Protin (British Biologicals)",
+      "Horlicks Diabetes Plus (HUL)",
+      "Celevida (Dr. Reddy's Laboratories)",
+      "Resource Diabetes (Nestlé India)",
+      "Fresubin DM (Fresenius Kabi India)",
+      "Pentasure DM (Hexagon Nutrition)",
+    ],
+    inverse: true,
+    axisLine: {
+      show: false,
+    },
+    axisTick: {
+      show: false,
+    },
+    axisLabel: {
+      color: "#000",
+      interval: 0,
+      align: "left",
+      fontWeight: "600",
+    },
+  },
+  grid: {
+    top: "2%",
+    left: "-50%",
+    right: "0%",
+    bottom: "2%",
+    containLabel: true,
+  },
+  series: [
+    {
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      type: "bar",
+      color: "#DC4674",
+    },
+  ],
+};
+
+// Table chart with only chart
+
+const option10 = {
+  xAxis: {
+    type: "value",
+    show: false,
+    max: 80,
+  },
+  yAxis: {
+    type: "category",
+    show: false,
+    data: [
+      "Ensure Diabetes Care (Abbott)",
+      "Prohance D (Sun Pharma)",
+      "Protinex Diabetes Care (Danone-Nutricia)",
+      "D-Protin (British Biologicals)",
+      "Horlicks Diabetes Plus (HUL)",
+      "Celevida (Dr. Reddy's Laboratories)",
+      "Resource Diabetes (Nestlé India)",
+      "Fresubin DM (Fresenius Kabi India)",
+      "Pentasure DM (Hexagon Nutrition)",
+    ],
+    inverse: true,
+    axisLine: {
+      show: false,
+    },
+    axisTick: {
+      show: false,
+    },
+  },
+  grid: {
+    top: "2%",
+    left: "-100%",
+    right: "20%",
+    bottom: "2%",
+    containLabel: true,
+  },
+  series: [
+    {
+      data: [72, 47, 40, 34, 32, 30, 27, 20, 20],
+      type: "bar",
+      label: {
+        show: true,
+        position: "right",
+        formatter: "{c}%",
+        color: "#000",
+      },
+      color: "#DC4674",
+    },
+  ],
+};
+
 export {
   Zone,
   State,
@@ -563,4 +676,6 @@ export {
   HCPSpeciality,
   HQOfClient,
   DistanceDistribution,
+  BrandAdoptionL,
+  BrandAdoption,
 };

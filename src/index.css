@@ -82,3 +82,9 @@ html {
   z-index: 10;
   box-shadow: 0px 2px 0px #5224b5;
 }
+.activeBtn {
+  @apply bg-[#DC4674] text-white py-1 px-4 rounded-md cursor-pointer;
+}
+.inActiveBtn {
+  @apply text-[#DC4674] bg-white py-1 px-4 rounded-md cursor-pointer border-2 border-[#DC4674];
+}
