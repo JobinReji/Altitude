@@ -9,7 +9,7 @@
 }
 
 html {
-  overflow: hidden;
+  @apply overflow-auto sm:overflow-hidden;
 }
 
 .nav-btn {
@@ -58,6 +58,24 @@ html {
   width: 5vw;
 }
 .dash_tab thead {
+  background-color: #eeeaf8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 2px 0px #5224b5;
+}
+.dash_tab2 tbody tr:last-child {
+  border-bottom: none;
+}
+.dash_tab2 thead th {
+  padding: 10px 0;
+  max-width: 5vw;
+}
+.dash_tab2 tbody td {
+  padding: 5px 0;
+  width: 5vw;
+}
+.dash_tab2 thead {
   background-color: #eeeaf8;
   position: sticky;
   top: 0;

@@ -530,12 +530,8 @@ const option8 = {
     {
       name: "Nightingale Chart",
       type: "pie",
-      radius: ["15%", "60%"],
+      radius: "60%",
       center: ["50%", "40%"],
-      roseType: "area",
-      itemStyle: {
-        borderRadius: 8,
-      },
       label: {
         show: true,
         position: "outside", // Place label outside the slices

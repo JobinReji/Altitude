@@ -24,6 +24,8 @@ const hcp = [
   { value: "No", label: "No" },
 ];
 
+const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+
 const customStyles = {
   control: (base, state) => ({
     ...base,
@@ -31,8 +33,8 @@ const customStyles = {
     backgroundColor: "#fff",
     borderWidth: "2px",
     borderColor: "#5224b5",
-    fontSize: "16px",
-    padding: "2px",
+    fontSize: isMobile ? "12px" : "16px",
+    padding: isMobile ? "0px" : "2px",
     borderRadius: "6px",
     minHeight: "40px",
     boxShadow: state.isFocused ? "0 0 0 1px #5224b5" : null,
@@ -40,10 +42,11 @@ const customStyles = {
       borderColor: "#5224b5",
     },
   }),
-  option: (base, state) => ({
+  option: (base) => ({
     ...base,
     backgroundColor: "#fff",
     color: "#5224b5",
+    fontSize: isMobile ? "12px" : "16px",
     "&:hover": {
       backgroundColor: "#5224b5",
       color: "#fff",
@@ -91,25 +94,25 @@ export default function Dashboard2() {
       <div className="sticky top-0 z-10 bg-white sm:static sm:bg-transparent sm:flex sm:justify-around w-full sm:w-[90%] h-auto text-[#5224b5] px-2 sm:px-0 py-2 sm:py-0">
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-8 sm:w-full">
           <div className="pb-1 sm:pb-3">
-            <div className="text-center text-sm sm:text-base">
+            <div className="text-center text-xs sm:text-base">
               <label>State</label>
             </div>
             <FilterData selectId="D_1" options={state} />
           </div>
           <div className="pb-1 sm:pb-3">
-            <div className="text-center text-sm sm:text-base">
+            <div className="text-center text-xs sm:text-base">
               <label>City</label>
             </div>
             <FilterData selectId="D_2" options={city} />
           </div>
           <div className="pb-1 sm:pb-3">
-            <div className="text-center text-sm sm:text-base">
+            <div className="text-center text-xs sm:text-base">
               <label>Type of City</label>
             </div>
             <FilterData selectId="D_3" options={typeOfCity} />
           </div>
           <div className="pb-1 sm:pb-3">
-            <div className="text-center text-sm sm:text-base">
+            <div className="text-center text-xs sm:text-base">
               <label>HCP Speciality</label>
             </div>
             <FilterData selectId="D_4" options={hcp} />
