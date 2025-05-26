@@ -121,59 +121,59 @@ export default function Dashboard3() {
       </div>
       <div className="w-full p-1 flex justify-end gap-4">
         <button className="activeBtn">Type of City</button>
-        <button className="inActiveBtn">HCP Type</button>
+        <button className="inActiveBtn">HCP Speciality</button>
       </div>
-      <div className="w-full h-[70vh]">
-        <div className="w-full flex bg-[#E9E3F6] border-b-2 border-[#5224B5]">
-          <div className="w-[25%] flex justify-center items-center py-2 border-r-2 border-[#5224B5] font-semibold">
+      <div className="w-full h-[70vh] overflow-x-auto">
+        <div className="w-full flex">
+          <div className="sm:w-[25%] min-w-[300px] flex justify-center items-center py-2 border-b-2 border-r-2 border-[#5224B5] font-semibold bg-[#E9E3F6]">
             Base
           </div>
-          <div className="w-[12.5%] flex flex-col justify-center items-center py-2 border-r-2 border-[#5224B5] font-semibold">
+          <div className="sm:w-[12.5%] min-w-[200px] flex flex-col justify-center items-center py-2 border-b-2 border-r-2 border-[#5224B5] font-semibold bg-[#E9E3F6]">
             <div>Total</div>
             <div>n=200</div>
           </div>
-          <div className="w-[12.5%] flex flex-col justify-center items-center py-2 border-r-2 border-[#5224B5] font-semibold">
+          <div className="sm:w-[12.5%] min-w-[200px] flex flex-col justify-center items-center py-2 border-b-2 border-r-2 border-[#5224B5] font-semibold bg-[#E9E3F6]">
             <div>Metro</div>
             <div>n=70</div>
           </div>
-          <div className="w-[12.5%] flex flex-col justify-center items-center py-2 border-r-2 border-[#5224B5] font-semibold">
+          <div className="sm:w-[12.5%] min-w-[200px] flex flex-col justify-center items-center py-2 border-b-2 border-r-2 border-[#5224B5] font-semibold bg-[#E9E3F6]">
             <div>Semi-Metro</div>
             <div>n=30</div>
           </div>
-          <div className="w-[12.5%] flex flex-col justify-center items-center py-2 border-r-2 border-[#5224B5] font-semibold">
+          <div className="sm:w-[12.5%] min-w-[200px] flex flex-col justify-center items-center py-2 border-b-2 border-r-2 border-[#5224B5] font-semibold bg-[#E9E3F6]">
             <div>Tier 1</div>
             <div>n=41</div>
           </div>
-          <div className="w-[12.5%] flex flex-col justify-center items-center py-2 border-r-2 border-[#5224B5] font-semibold">
+          <div className="sm:w-[12.5%] min-w-[200px] flex flex-col justify-center items-center py-2 border-b-2 border-r-2 border-[#5224B5] font-semibold bg-[#E9E3F6]">
             <div>Tier 2</div>
             <div>n=34</div>
           </div>
-          <div className="w-[12.5%] flex flex-col justify-center items-center py-2 font-semibold">
+          <div className="sm:w-[12.5%] min-w-[200px] flex flex-col justify-center items-center py-2 font-semibold border-b-2 bg-[#E9E3F6]">
             <div>Others</div>
             <div>n=25</div>
           </div>
         </div>
-        <div className="h-[85%] flex">
-          <div className="w-[25%] h-full border-r-2 border-[#5224B5]">
+        <div className="h-[80%] flex">
+          <div className="sm:w-[25%] min-w-[300px] h-full border-r-2 border-[#5224B5]">
             <BrandAdoptionL />
           </div>
-          <div className="w-[12.5%] h-full border-r-2 border-[#5224B5]">
-            <BrandAdoption />
+          <div className="sm:w-[12.5%] min-w-[200px] h-full border-r-2 border-[#5224B5]">
+            <BrandAdoption data={[72, 47, 40, 34, 32, 30, 27, 20, 20]} />
           </div>
-          <div className="w-[12.5%] h-full border-r-2 border-[#5224B5]">
-            <BrandAdoption />
+          <div className="sm:w-[12.5%] min-w-[200px] h-full border-r-2 border-[#5224B5]">
+            <BrandAdoption data={[65, 42, 38, 30, 28, 25, 22, 18, 15]} />
           </div>
-          <div className="w-[12.5%] h-full border-r-2 border-[#5224B5]">
-            <BrandAdoption />
+          <div className="sm:w-[12.5%] min-w-[200px] h-full border-r-2 border-[#5224B5]">
+            <BrandAdoption data={[50, 40, 35, 30, 25, 20, 15, 10, 5]} />
           </div>
-          <div className="w-[12.5%] h-full border-r-2 border-[#5224B5]">
-            <BrandAdoption />
+          <div className="sm:w-[12.5%] min-w-[200px] h-full border-r-2 border-[#5224B5]">
+            <BrandAdoption data={[80, 60, 50, 40, 30, 20, 15, 10, 5]} />
           </div>
-          <div className="w-[12.5%] h-full border-r-2 border-[#5224B5]">
-            <BrandAdoption />
+          <div className="sm:w-[12.5%] min-w-[200px] h-full border-r-2 border-[#5224B5]">
+            <BrandAdoption data={[45, 35, 30, 25, 20, 15, 10, 5, 2]} />
           </div>
-          <div className="w-[12.5%] h-full">
-            <BrandAdoption />
+          <div className="sm:w-[12.5%] min-w-[200px] h-full">
+            <BrandAdoption data={[30, 25, 20, 15, 10, 8, 5, 3, 1]} />
           </div>
         </div>
       </div>

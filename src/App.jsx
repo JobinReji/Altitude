@@ -38,9 +38,9 @@ function App() {
       {/* <Login /> */}
       <Header />
       <section className="h-[90%] w-full sm:p-4 p-2">
-        <Dashboard />
+        {/* <Dashboard /> */}
         {/* <Dashboard2 /> */}
-        {/* <Dashboard3 /> */}
+        <Dashboard3 />
         {/* <div
           className="h-full w-full bg-center bg-cover rounded-xl flex sm:flex-row flex-col justify-around p-4 overflow-auto sm:border-none border-2 border-[#5224b5] relative"
           style={{

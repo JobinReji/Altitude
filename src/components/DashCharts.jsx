@@ -45,9 +45,21 @@ function BrandAdoptionL() {
     <ReactECharts option={option9} style={{ height: "100%", width: "100%" }} />
   );
 }
-function BrandAdoption() {
+function BrandAdoption({ data }) {
+  const chartOption = {
+    ...option10,
+    series: [
+      {
+        ...option10.series[0],
+        data: data || option10.series[0].data,
+      },
+    ],
+  };
   return (
-    <ReactECharts option={option10} style={{ height: "100%", width: "100%" }} />
+    <ReactECharts
+      option={chartOption}
+      style={{ height: "100%", width: "100%" }}
+    />
   );
 }
 
@@ -601,9 +613,9 @@ const option9 = {
   },
   grid: {
     top: "2%",
-    left: "-50%",
+    left: "-65%",
     right: "0%",
-    bottom: "2%",
+    bottom: "0%",
     containLabel: true,
   },
   series: [
@@ -647,9 +659,9 @@ const option10 = {
   },
   grid: {
     top: "2%",
-    left: "-100%",
+    left: "-110%",
     right: "20%",
-    bottom: "2%",
+    bottom: "0%",
     containLabel: true,
   },
   series: [
