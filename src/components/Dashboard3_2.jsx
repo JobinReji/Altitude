@@ -87,7 +87,7 @@ function FilterData({ selectId, options }) {
   );
 }
 
-export default function Dashboard3() {
+export default function Dashboard3_2() {
   return (
     <div className="w-full h-full flex flex-col items-center">
       {/* Filter section - compact on mobile */}
@@ -120,7 +120,7 @@ export default function Dashboard3() {
         </div>
       </div>
       <div className="w-full p-1 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
+        <div className="flex sm:flex-row flex-col items-center sm:gap-2 gap-0.5">
           <label className="font-bold text-[#264051]">Sum</label>
           <label class="switch">
             <input type="checkbox" />
@@ -129,11 +129,11 @@ export default function Dashboard3() {
           <label className="font-bold text-[#66ACD7]">Share</label>
         </div>
         <div className=" flex gap-4">
-          <button className="activeBtn">Type of City</button>
-          <button className="inActiveBtn">HCP Speciality</button>
+          <button className="inActiveBtn">Type of City</button>
+          <button className="activeBtn">HCP Speciality</button>
         </div>
       </div>
-      <div className="w-full h-[70vh] overflow-x-auto">
+      <div className="sm:w-full w-full h-[70vh] overflow-x-auto">
         <div className="w-full flex">
           <div className="sm:w-[25%] min-w-[300px] flex justify-center items-center py-2 border-b-2 border-r-2 border-[#5224B5] font-semibold bg-[#E9E3F6]">
             Base
