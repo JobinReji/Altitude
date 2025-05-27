@@ -85,6 +85,29 @@ function BrandDispersion({ data }) {
   );
 }
 
+function BrandDispersionL2() {
+  return (
+    <ReactECharts option={option13} style={{ height: "100%", width: "100%" }} />
+  );
+}
+function BrandDispersion2({ data }) {
+  const chartOption = {
+    ...option14,
+    series: [
+      {
+        ...option12.series[0],
+        data: data || option12.series[0].data,
+      },
+    ],
+  };
+  return (
+    <ReactECharts
+      option={chartOption}
+      style={{ height: "100%", width: "100%" }}
+    />
+  );
+}
+
 const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
 
 const option1 = {
@@ -802,6 +825,176 @@ const option12 = {
   ],
 };
 
+// Table chart only label
+
+const option13 = {
+  xAxis: {
+    type: "value",
+    show: false,
+    max: 80,
+  },
+  yAxis: {
+    type: "category",
+    data: [
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+    ],
+    inverse: true,
+    axisLine: {
+      show: false,
+    },
+    axisTick: {
+      show: false,
+    },
+    axisLabel: {
+      color: "#000",
+      interval: 0,
+      align: "left",
+      fontWeight: "600",
+    },
+  },
+  grid: {
+    top: "2%",
+    left: isMobile ? "-83%" : "-70%",
+    right: "0%",
+    bottom: "0%",
+    containLabel: true,
+  },
+  series: [
+    {
+      data: [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      ],
+      type: "bar",
+      color: "#DC4674",
+    },
+  ],
+};
+
+const option14 = {
+  xAxis: {
+    type: "value",
+    show: false,
+    max: 80,
+  },
+  yAxis: {
+    type: "category",
+    show: false,
+    data: [
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+      "Ensure (Abbott) - 200GM-Chocolate-Box",
+      "Ensure (Abbott) - 375GM-Chocolate-Box",
+      "Prohance D (Sun Pharma) - 200GM-Vanilla-Powder Tin",
+      "Protinex Diabetes Care (Danone -Nutricia) - 400GM-Creamy Vanilla-Jar",
+      "Celevida (Dr. Reddy's Laboratories) - 400GM-Kesar Elaichi-Powder Tin",
+      "Resource Diabetes (Nestlé India) - 400GM-Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Creamy Vanilla-Tin",
+      "Pentasure DM (Hexagon Nutrition) - 400GM-Chocolate-Tin",
+    ],
+    inverse: true,
+    axisLine: {
+      show: false,
+    },
+    axisTick: {
+      show: false,
+    },
+  },
+  grid: {
+    top: "2%",
+    left: "-180%",
+    right: "20%",
+    bottom: "0%",
+    containLabel: true,
+  },
+  series: [
+    {
+      data: [
+        49, 47, 40, 32, 32, 30, 24, 20, 49, 47, 40, 32, 32, 30, 24, 20, 49, 47,
+        40, 32, 32, 30, 24, 20, 49, 47, 40, 32, 32, 30, 24, 20, 49, 47, 40, 32,
+        32, 30, 24, 20,
+      ],
+      type: "bar",
+      label: {
+        show: true,
+        position: "right",
+        formatter: "{c}%",
+        color: "#000",
+      },
+      color: "#DC4674",
+    },
+  ],
+};
+
 export {
   Zone,
   State,
@@ -815,4 +1008,6 @@ export {
   BrandAdoption,
   BrandDispersionL,
   BrandDispersion,
+  BrandDispersionL2,
+  BrandDispersion2,
 };

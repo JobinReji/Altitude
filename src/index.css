@@ -39,7 +39,7 @@ html {
   background-color: #5224b5;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 9;
   box-shadow: 0px 2px 0px #5224b5;
 }
 
@@ -61,7 +61,7 @@ html {
   background-color: #eeeaf8;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 9;
   box-shadow: 0px 2px 0px #5224b5;
 }
 .dash_tab2 tbody tr:last-child {
@@ -79,7 +79,7 @@ html {
   background-color: #eeeaf8;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 9;
   box-shadow: 0px 2px 0px #5224b5;
 }
 .activeBtn {

@@ -32,6 +32,7 @@ import Dashboard2 from "./components/Dashboard2";
 import Dashboard3 from "./components/Dashboard3";
 import Dashboard3_2 from "./components/Dashboard3_2";
 import Dashboard4 from "./components/Dashboard4";
+import Dashboard4_2 from "./components/Dashboard4_2";
 import "./App.css";
 
 function App() {
@@ -44,7 +45,8 @@ function App() {
         {/* <Dashboard2 /> */}
         {/* <Dashboard3 /> */}
         {/* <Dashboard3_2 /> */}
-        <Dashboard4 />
+        {/* <Dashboard4 /> */}
+        <Dashboard4_2 />
         {/* <div
           className="h-full w-full bg-center bg-cover rounded-xl flex sm:flex-row flex-col justify-around p-4 overflow-auto sm:border-none border-2 border-[#5224b5] relative"
           style={{
