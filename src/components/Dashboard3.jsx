@@ -101,8 +101,6 @@ export default function Dashboard3() {
         const response = await fetch("your-api-endpoint");
         const result = await response.json();
         setData(result);
-      } catch (error) {
-        console.error("Error fetching data:", error);
       } finally {
         setIsLoading(false);
       }
