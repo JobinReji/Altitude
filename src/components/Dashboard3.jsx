@@ -1,7 +1,8 @@
 import Select from "react-select";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrandAdoptionL, BrandAdoption } from "./DashCharts";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Loader from "./Loader";
 
 const state = [
   { value: "Karnataka", label: "Karnataka" },
@@ -88,6 +89,29 @@ function FilterData({ selectId, options }) {
 }
 
 export default function Dashboard3() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Simulate API/data fetch
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        // Replace with actual API call
+        const response = await fetch("your-api-endpoint");
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <div className="w-full h-full flex flex-col items-center">
       {/* Filter section - compact on mobile */}

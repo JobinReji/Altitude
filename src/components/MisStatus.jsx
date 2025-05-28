@@ -303,10 +303,11 @@ const option2 = {
   },
   yAxis: {
     type: "value",
+    show: false,
   },
   grid: {
     top: "8%",
-    left: "3%",
+    left: "2%",
     right: "4%",
     bottom: "15%",
     containLabel: true,
