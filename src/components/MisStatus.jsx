@@ -20,8 +20,16 @@ export default function MisStatus() {
               <div className="sm:h-full h-[90%]">
                 <ReactECharts
                   option={option}
+                  className="sm:block hidden"
                   style={{ height: "100%", width: "100%" }}
                 />
+                <div className="w-full overflow-x-auto sm-tab">
+                  <ReactECharts
+                    option={option2}
+                    className="sm:hidden block"
+                    style={{ height: "220%", width: "400%" }}
+                  />
+                </div>
               </div>
             </div>
             <hr className="border-[#5224b5] my-6" />
@@ -182,6 +190,24 @@ const option = {
       "2025-01-20",
       "2025-01-25",
       "2025-01-14",
+      "2025-01-06",
+      "2025-01-08",
+      "2025-01-10",
+      "2025-01-20",
+      "2025-01-25",
+      "2025-01-14",
+      "2025-01-06",
+      "2025-01-08",
+      "2025-01-10",
+      "2025-01-20",
+      "2025-01-25",
+      "2025-01-14",
+      "2025-01-06",
+      "2025-01-08",
+      "2025-01-10",
+      "2025-01-20",
+      "2025-01-25",
+      "2025-01-14",
     ],
     axisPointer: {
       type: "shadow",
@@ -217,7 +243,10 @@ const option = {
   },
   series: [
     {
-      data: [6, 32, 25, 15, 13, 1],
+      data: [
+        6, 32, 25, 15, 13, 1, 6, 32, 25, 15, 13, 1, 6, 32, 25, 15, 13, 1, 6, 32,
+        25, 15, 13, 1,
+      ],
       type: "line",
       color: "#132f62",
       label: {
@@ -234,6 +263,71 @@ const option = {
         width: 2, // Line width (optional)
       },
       areaStyle: {},
+    },
+  ],
+};
+
+const option2 = {
+  xAxis: {
+    type: "category",
+    data: [
+      "2025-01-06",
+      "2025-01-08",
+      "2025-01-10",
+      "2025-01-20",
+      "2025-01-25",
+      "2025-01-14",
+      "2025-01-06",
+      "2025-01-08",
+      "2025-01-10",
+      "2025-01-20",
+      "2025-01-25",
+      "2025-01-14",
+      "2025-01-06",
+      "2025-01-08",
+      "2025-01-10",
+      "2025-01-20",
+      "2025-01-25",
+      "2025-01-14",
+      "2025-01-06",
+      "2025-01-08",
+      "2025-01-10",
+      "2025-01-20",
+      "2025-01-25",
+      "2025-01-14",
+    ],
+    axisLabel: {
+      rotate: 45, // Rotates labels to prevent overlap
+      interval: 0, // Show all labels
+    },
+  },
+  yAxis: {
+    type: "value",
+  },
+  grid: {
+    top: "8%",
+    left: "3%",
+    right: "4%",
+    bottom: "15%",
+    containLabel: true,
+  },
+  series: [
+    {
+      name: "State Data",
+      data: [
+        6, 32, 25, 15, 13, 1, 6, 32, 25, 15, 13, 1, 6, 32, 25, 15, 13, 1, 6, 32,
+        25, 15, 13, 1,
+      ],
+      label: {
+        show: true,
+        position: "top",
+        formatter: "{c}",
+        color: "#656565",
+      },
+      type: "bar",
+      itemStyle: {
+        color: "#5224b590",
+      },
     },
   ],
 };
