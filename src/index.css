@@ -158,3 +158,22 @@ html {
     )
   );
 }
+
+@keyframes typing {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+}
+.typing::after {
+  content: "";
+  animation: typing 1.5s steps(3) infinite;
+}
