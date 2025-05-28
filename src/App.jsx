@@ -46,8 +46,8 @@ function App() {
         {/* <Dashboard3 /> */}
         {/* <Dashboard3_2 /> */}
         {/* <Dashboard4 /> */}
-        <Dashboard4_2 />
-        {/* <div
+        {/* <Dashboard4_2 /> */}
+        <div
           className="h-full w-full bg-center bg-cover rounded-xl flex sm:flex-row flex-col justify-around p-4 overflow-auto sm:border-none border-2 border-[#5224b5] relative"
           style={{
             backgroundImage: `url(${bgImgD})`,
@@ -56,33 +56,33 @@ function App() {
               backgroundImage: `url(${bgImgM})`,
             },
           }}
-        > */}
-        {/* <QuestionPatternSa /> */}
-        {/* <QuestionPatternSb /> */}
-        {/* <QuestionPatternM1 /> */}
-        {/* <QuestionPatternM2 /> */}
-        {/* <QuestionPatternM3_Ensure /> */}
-        {/* <QuestionPatternM3_ProhanceD /> */}
-        {/* <QuestionPatternM3_ProtinexD /> */}
-        {/* <QuestionPatternM3_DProtin /> */}
-        {/* <QuestionPatternM3_HorlicksD /> */}
-        {/* <QuestionPatternM3_Celevida /> */}
-        {/* <QuestionPatternM3_ResourceD /> */}
-        {/* <QuestionPatternM3_FresubinDM /> */}
-        {/* <QuestionPatternM3_PentasureDM /> */}
-        {/* <TableView_Ensure /> */}
-        {/* <TableView_ProhanceD /> */}
-        {/* <TableView_ProtinexD /> */}
-        {/* <TableView_DProtin /> */}
-        {/* <TableView_HorlicksD /> */}
-        {/* <TableView_Celevida /> */}
-        {/* <TableView_ResourceD /> */}
-        {/* <TableView_FresubinDM /> */}
-        {/* <TableView_PentasureDM /> */}
-        {/* <QuestionPatternM4 /> */}
-        {/* <ThankYou /> */}
-        {/* <MisStatus /> */}
-        {/* </div> */}
+        >
+          {/* <QuestionPatternSa /> */}
+          {/* <QuestionPatternSb /> */}
+          {/* <QuestionPatternM1 /> */}
+          {/* <QuestionPatternM2 /> */}
+          {/* <QuestionPatternM3_Ensure /> */}
+          {/* <QuestionPatternM3_ProhanceD /> */}
+          {/* <QuestionPatternM3_ProtinexD /> */}
+          {/* <QuestionPatternM3_DProtin /> */}
+          {/* <QuestionPatternM3_HorlicksD /> */}
+          {/* <QuestionPatternM3_Celevida /> */}
+          {/* <QuestionPatternM3_ResourceD /> */}
+          {/* <QuestionPatternM3_FresubinDM /> */}
+          {/* <QuestionPatternM3_PentasureDM /> */}
+          {/* <TableView_Ensure /> */}
+          {/* <TableView_ProhanceD /> */}
+          {/* <TableView_ProtinexD /> */}
+          {/* <TableView_DProtin /> */}
+          {/* <TableView_HorlicksD /> */}
+          {/* <TableView_Celevida /> */}
+          {/* <TableView_ResourceD /> */}
+          {/* <TableView_FresubinDM /> */}
+          {/* <TableView_PentasureDM /> */}
+          {/* <QuestionPatternM4 /> */}
+          {/* <ThankYou /> */}
+          <MisStatus />
+        </div>
       </section>
     </div>
   );

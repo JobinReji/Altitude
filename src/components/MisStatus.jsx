@@ -5,10 +5,10 @@ import downloadRaw from "../assets/raw_download.png";
 export default function MisStatus() {
   return (
     <>
-      <div className="w-full sm:w-[90%] p-1 rounded-md overflow-auto sm-tab">
+      <div className="w-full sm:w-[90%] p-1 rounded-md sm-tab">
         <div className="h-full w-full flex justify-center items-stretch text-[#5224b5]">
           <div className="w-[98%] rounded-lg shadow_out px-5 py-2">
-            <div className="h-[55%]">
+            <div className="h-[45%]">
               <div className="relative flex sm:flex-row flex-col items-center justify-center">
                 <div className="flex justify-center text-xl font-bold text-[#5224b5] w-full sm:w-auto">
                   Survey Completion per Day
@@ -152,7 +152,7 @@ export default function MisStatus() {
           <ChevronRight />
         </div>
       </div>
-      <div className="absolute bottom-1 right-2 flex gap-2">
+      <div className="absolute bottom-1 right-2 flex sm:flex-row flex-col gap-2">
         <button
           className="cursor-pointer w-7"
           title="Doctorwise City Data Download"

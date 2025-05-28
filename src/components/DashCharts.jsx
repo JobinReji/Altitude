@@ -1,3 +1,4 @@
+import { color } from "echarts";
 import ReactECharts from "echarts-for-react";
 
 function Zone() {
@@ -120,9 +121,8 @@ const option1 = {
   },
   series: [
     {
-      name: "Access From",
       type: "pie",
-      center: ["50%", "50%"],
+      center: ["50%", "55%"],
       radius: ["25%", "50%"],
       avoidLabelOverlap: false,
       padAngle: 5,
@@ -130,18 +130,20 @@ const option1 = {
         borderRadius: 10,
       },
       label: {
-        show: false,
-        position: "center",
+        show: true,
+        formatter: "{c}%", // Show value
+        position: "outside", // or "inside" if you want values inside slices
+        color: "#656565",
       },
       emphasis: {
         label: {
           show: true,
-          fontSize: 40,
+          fontSize: 12,
           fontWeight: "bold",
         },
       },
       labelLine: {
-        show: false,
+        show: true,
       },
       data: [
         { value: 28, name: "North" },
@@ -189,7 +191,7 @@ const option2 = {
     type: "value",
   },
   grid: {
-    top: "6%",
+    top: "8%",
     left: "3%",
     right: "4%",
     bottom: "15%",
@@ -202,6 +204,12 @@ const option2 = {
         120, 200, 150, 80, 110, 130, 120, 200, 150, 80, 70, 110, 130, 120, 200,
         150, 80, 90, 130,
       ],
+      label: {
+        show: true,
+        position: "top",
+        formatter: "{c}",
+        color: "#656565",
+      },
       type: "bar",
       itemStyle: {
         color: "#dc4674",
@@ -388,13 +396,16 @@ const option4 = {
   },
   series: [
     {
-      name: "Access From",
       type: "pie",
       radius: ["40%", "70%"],
       center: ["50%", "75%"],
       // adjust the start and end angle
       startAngle: 180,
       endAngle: 360,
+      label: {
+        formatter: "{c}", // This shows the raw value
+        color: "#656565", // Optional: label text color
+      },
       data: [
         { value: 1048, name: "Search Engine" },
         { value: 735, name: "Direct" },
@@ -426,18 +437,20 @@ const option5 = {
         borderRadius: 10,
       },
       label: {
-        show: false,
-        position: "center",
+        show: true,
+        formatter: "{c}%", // Show value
+        position: "outside", // or "inside" if you want values inside slices
+        color: "#656565",
       },
       emphasis: {
         label: {
           show: true,
-          fontSize: 40,
+          fontSize: 12,
           fontWeight: "bold",
         },
       },
       labelLine: {
-        show: false,
+        show: true,
       },
       data: [
         { value: 40, name: "Core" },
@@ -539,7 +552,7 @@ const option7 = {
     type: "value",
   },
   grid: {
-    top: "6%",
+    top: "8%",
     left: "3%",
     right: "4%",
     bottom: "15%",
@@ -571,6 +584,12 @@ const option7 = {
         110,
         130,
       ],
+      label: {
+        show: true,
+        position: "top",
+        formatter: "{c}",
+        color: "#656565",
+      },
       type: "bar",
       itemStyle: {
         color: "#6bb3c2", // Default color for all other bars
