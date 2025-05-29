@@ -33,6 +33,7 @@ import Dashboard3 from "./components/Dashboard3";
 import Dashboard3_2 from "./components/Dashboard3_2";
 import Dashboard4 from "./components/Dashboard4";
 import Dashboard4_2 from "./components/Dashboard4_2";
+import Dashboard5 from "./components/Dashboard5";
 import "./App.css";
 
 function App() {
@@ -43,10 +44,11 @@ function App() {
       <section className="h-[90%] w-full sm:p-4 p-2">
         {/* <Dashboard /> */}
         {/* <Dashboard2 /> */}
-        <Dashboard3 />
+        {/* <Dashboard3 /> */}
         {/* <Dashboard3_2 /> */}
         {/* <Dashboard4 /> */}
         {/* <Dashboard4_2 /> */}
+        <Dashboard5 />
         {/* <div
           className="h-full w-full bg-center bg-cover rounded-xl flex sm:flex-row flex-col justify-around p-4 overflow-auto sm:border-none border-2 border-[#5224b5] relative"
           style={{

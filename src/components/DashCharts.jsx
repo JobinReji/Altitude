@@ -108,6 +108,11 @@ function BrandDispersion2({ data }) {
     />
   );
 }
+function Skus() {
+  return (
+    <ReactECharts option={option15} style={{ height: "100%", width: "100%" }} />
+  );
+}
 
 const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
 
@@ -246,46 +251,6 @@ const option3 = {
       "Guntur",
       "Gurugram",
       "Guwahati",
-      "Hyderabad",
-      "Jamshedpur",
-      "Kakinada",
-      "Kolkata",
-      "Kovilpatti",
-      "Kozhikode",
-      "Kundapur",
-      "Lucknow",
-      "Madurai",
-      "Madurai North",
-      "Malda",
-      "Mangalagiri",
-      "Mangalore",
-      "Melur",
-      "Mumbai",
-      "Nagpur",
-      "Narasaraopet",
-      "Nellore",
-      "Noida",
-      "Ongole",
-      "Patna",
-      "Pondicherry",
-      "Pune",
-      "Rajahmundry",
-      "Ranchi",
-      "Salem",
-      "Surat",
-      "Tenali",
-      "Tezpur",
-      "Tirunelveli",
-      "Tirupathi",
-      "Tiruppur",
-      "TM HQ - Ahmedabad",
-      "TM HQ - Aurangabad",
-      "Varanasi",
-      "Vijayawada",
-      "Vizag",
-      "Vuyyuru",
-      "Yawatmal",
-      "Yerragondapalem",
     ],
     axisLabel: {
       rotate: 45,
@@ -299,7 +264,7 @@ const option3 = {
     top: "6%",
     left: "3%",
     right: "4%",
-    bottom: "15%",
+    bottom: "2%",
     containLabel: true,
   },
   series: [
@@ -334,50 +299,14 @@ const option3 = {
         80,
         70,
         110,
-        130,
-        150,
-        80,
-        170,
-        110,
-        130,
-        150,
-        80,
-        70,
-        110,
-        130,
-        150,
-        80,
-        170,
-        110,
-        130,
-        150,
-        80,
-        70,
-        110,
-        130,
-        150,
-        80,
-        170,
-        110,
-        130,
-        150,
-        80,
-        70,
-        110,
-        130,
-        150,
-        80,
-        170,
-        110,
-        130,
-        150,
-        80,
-        70,
-        110,
-        130,
-        150,
-        80,
       ],
+
+      label: {
+        show: true,
+        position: "top",
+        formatter: "{c}",
+        color: "#656565",
+      },
       type: "bar",
       itemStyle: {
         color: "#6bb3c2", // Default color for all other bars
@@ -481,16 +410,6 @@ const option6 = {
       "General",
       "Surgeon",
       "Nephrologist",
-      "Internal Medicine\n -Emergency Medicine",
-      "Medical",
-      "Oncologist",
-      "Neuro",
-      "Physician",
-      "Surgical",
-      "Oncologist",
-      "Plastic",
-      "Surgery",
-      "Oncologist",
     ],
     axisLabel: {
       rotate: 45, // Rotates labels to prevent overlap
@@ -504,7 +423,7 @@ const option6 = {
     top: "6%",
     left: "3%",
     right: "4%",
-    bottom: "15%",
+    bottom: "0%",
     containLabel: true,
   },
   series: [
@@ -512,7 +431,7 @@ const option6 = {
       name: "State Data",
       data: [
         120, 200, 150, 80, 110, 130, 120, 200, 150, 80, 70, 110, 130, 120, 200,
-        150, 80, 90, 130, 120, 200, 150, 80, 90, 150, 80, 90,
+        150, 80,
       ],
       type: "bar",
       itemStyle: {
@@ -1014,6 +933,119 @@ const option14 = {
   ],
 };
 
+const option15 = {
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "shadow",
+    },
+    formatter: (params) => {
+      const total = params[0].value + params[1].value;
+      return `
+        ${params[0].seriesName}: ${
+        Math.round((params[0].value / total) * 1000) / 10
+      }%<br/>
+        ${params[1].seriesName}: ${
+        Math.round((params[1].value / total) * 1000) / 10
+      }%<br/>
+        Total: ${total}
+      `;
+    },
+  },
+  legend: {
+    selectedMode: false,
+    data: ["Rx", "Rc"],
+  },
+  yAxis: {
+    type: "value",
+    show: false,
+    axisLabel: {
+      formatter: "{value}%",
+    },
+  },
+  xAxis: {
+    type: "category",
+    data: [
+      "200GM-Chocolate-Box",
+      "375GM-Chocolate-Box",
+      "400GM-Chocolate-Jar",
+      "950GM-Chocolate-Box",
+      "1KG-Chocolate-Refill Powder",
+      "1.9KG-Chocolate-Box",
+      "200GM-Vanilla-Box",
+      "375GM-Vanilla-Box",
+      "400GM-Vanilla-Jar",
+      "950GM-Vanilla-Box",
+      "1KG-Vanilla-Refill Powder",
+      "1.9KG-Vanilla-Box",
+    ],
+    axisLabel: {
+      rotate: 45,
+    },
+  },
+  grid: {
+    top: "10%",
+    left: "3%",
+    right: "4%",
+    bottom: "2%",
+    containLabel: true,
+  },
+  series: [
+    {
+      name: "Rx",
+      type: "bar",
+      stack: "total",
+      barWidth: "60%",
+      itemStyle: {
+        color: "#6BB3C2",
+      },
+      label: {
+        show: true,
+        fontSize: 10,
+        position: "inside",
+        formatter: (params) => {
+          const total =
+            params.value +
+            (params.dataIndex !== undefined
+              ? option15.series[1].data[params.dataIndex]
+              : 0);
+          return total > 0
+            ? `${Math.round((params.value / total) * 1000) / 10}%`
+            : "";
+        },
+        color: "#000",
+      },
+      data: [100, 302, 301, 334, 390, 330, 320, 132, 101, 134, 90, 230],
+    },
+    {
+      name: "Rc",
+      type: "bar",
+      stack: "total",
+      barWidth: "60%",
+      itemStyle: {
+        color: "#DC4674",
+      },
+      label: {
+        show: true,
+        fontSize: 10,
+        position: "inside",
+        formatter: (params) => {
+          const total =
+            params.value +
+            (params.dataIndex !== undefined
+              ? option15.series[0].data[params.dataIndex]
+              : 0);
+          return total > 0
+            ? `${Math.round((params.value / total) * 1000) / 10}%`
+            : "";
+        },
+        color: "#fff",
+      },
+      data: [320, 132, 101, 134, 90, 230, 210, 302, 301, 334, 390, 330],
+    },
+  ],
+};
+
 export {
   Zone,
   State,
@@ -1029,4 +1061,5 @@ export {
   BrandDispersion,
   BrandDispersionL2,
   BrandDispersion2,
+  Skus,
 };
