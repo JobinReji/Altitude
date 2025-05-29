@@ -7,10 +7,10 @@ export default function MisStatus() {
     <>
       <div className="w-full sm:w-[90%] p-1 rounded-md sm-tab">
         <div className="h-full w-full flex justify-center items-stretch text-[#5224b5]">
-          <div className="w-[98%] rounded-lg shadow_out px-5 py-2">
+          <div className="w-[98%] rounded-lg shadow_out px-5 pb-2">
             <div className="h-[45%]">
               <div className="relative flex sm:flex-row flex-col items-center justify-center">
-                <div className="flex justify-center text-xl font-bold text-[#5224b5] w-full sm:w-auto">
+                <div className="flex justify-center text-xl font-bold mb-2 text-[#5224b5] w-full sm:w-auto">
                   Survey Completion per Day
                 </div>
                 <div className="text-[#132F62] font-semibold sm:absolute right-0 w-full sm:w-auto text-right">
@@ -178,135 +178,185 @@ export default function MisStatus() {
 const option = {
   tooltip: {
     trigger: "axis",
-    formatter: "{b}: {c} surveys",
+    formatter: function (params) {
+      return `${params[0].axisValue}<br/>
+              ${params[0].seriesName}: ${params[0].value} surveys<br/>
+              ${params[1].seriesName}: ${params[1].value} surveys`;
+    },
+  },
+  legend: {
+    data: ["Chemists", "Doctors"],
+    top: 0,
+    textStyle: {
+      color: "#5224b5",
+    },
   },
   xAxis: {
     type: "category",
     boundaryGap: true,
     data: [
-      "2025-01-06",
-      "2025-01-08",
-      "2025-01-10",
-      "2025-01-20",
-      "2025-01-25",
-      "2025-01-14",
-      "2025-01-06",
-      "2025-01-08",
-      "2025-01-10",
-      "2025-01-20",
-      "2025-01-25",
-      "2025-01-14",
-      "2025-01-06",
-      "2025-01-08",
-      "2025-01-10",
-      "2025-01-20",
-      "2025-01-25",
-      "2025-01-14",
-      "2025-01-06",
-      "2025-01-08",
-      "2025-01-10",
-      "2025-01-20",
-      "2025-01-25",
-      "2025-01-14",
+      "Week 1",
+      "Week 2",
+      "Week 3",
+      "Week 4",
+      "Week 5",
+      "Week 6",
+      "Week 7",
+      "Week 8",
     ],
     axisPointer: {
       type: "shadow",
     },
     axisLabel: {
-      color: "#5224b5", // Font color (white in this case)
-      fontSize: 12, // Font size (optional)
+      color: "#5224b5",
+      fontSize: 12,
+    },
+    axisLine: {
+      show: true, // Keep x-axis line visible
+      lineStyle: {
+        color: "#9AA5BA", // Changed to match x-axis
+        width: 1, // Optional: make line thinner
+      },
     },
     splitLine: {
-      show: false, // Disable gridlines on the x-axis
+      show: false,
     },
   },
   yAxis: {
     type: "value",
-    axisLabel: {
+    nameTextStyle: {
       color: "#5224b5",
-      fontSize: 9,
+      padding: [0, 0, 0, 30], // Adjust position
+    },
+    axisLabel: {
+      show: false,
+    },
+    axisLine: {
+      show: false,
     },
     splitLine: {
-      show: true, // Enable gridlines on the y-axis
+      show: true,
       lineStyle: {
-        color: "#9AA5BA", // Lighter gridline color
-        type: "line", // Dashed gridlines for subtle appearance
+        color: "#bbbbbb",
+        type: "dashed",
       },
     },
   },
   grid: {
-    top: "6%",
+    top: "15%", // Increased to accommodate legend
     left: "3%",
     right: "4%",
-    bottom: "15%",
+    bottom: "10%",
     containLabel: true,
   },
   series: [
     {
-      data: [
-        6, 32, 25, 15, 13, 1, 6, 32, 25, 15, 13, 1, 6, 32, 25, 15, 13, 1, 6, 32,
-        25, 15, 13, 1,
-      ],
+      name: "Chemists",
+      data: [42, 38, 55, 47, 63, 58, 45, 52],
       type: "line",
-      color: "#132f62",
+      color: "#5224b5", // Purple color
       label: {
         show: true,
-        position: "top", // Show labels on top of data points
-        color: "#5224b5", // Label font color
-        fontSize: 10, // Font size of the labels
-        formatter: "{c}", // Show the value of the point
+        position: "top",
+        color: "#5224b5",
+        fontSize: 10,
+        formatter: "{c}",
       },
       itemStyle: {
-        color: "#5224b590", // Point color (optional)
+        color: "#5224b5",
       },
       lineStyle: {
-        width: 2, // Line width (optional)
+        width: 3,
       },
-      areaStyle: {},
+      symbolSize: 8,
+    },
+    {
+      name: "Doctors",
+      data: [15, 22, 18, 25, 12, 20, 28, 17],
+      type: "line",
+      color: "#6bb3c2", // Teal color
+      label: {
+        show: true,
+        position: "top",
+        color: "#6bb3c2",
+        fontSize: 10,
+        formatter: "{c}",
+      },
+      itemStyle: {
+        color: "#6bb3c2",
+      },
+      lineStyle: {
+        width: 3,
+      },
+      symbolSize: 8,
     },
   ],
 };
 
 const option2 = {
+  tooltip: {
+    trigger: "axis",
+    formatter: function (params) {
+      return `${params[0].axisValue}<br/>
+              ${params[0].seriesName}: ${params[0].value} surveys<br/>
+              ${params[1].seriesName}: ${params[1].value} surveys`;
+    },
+  },
+  legend: {
+    data: ["Chemists", "Doctors"],
+    top: 0,
+    textStyle: {
+      color: "#5224b5",
+    },
+  },
   xAxis: {
     type: "category",
     data: [
-      "2025-01-06",
-      "2025-01-08",
-      "2025-01-10",
-      "2025-01-20",
-      "2025-01-25",
-      "2025-01-14",
-      "2025-01-06",
-      "2025-01-08",
-      "2025-01-10",
-      "2025-01-20",
-      "2025-01-25",
-      "2025-01-14",
-      "2025-01-06",
-      "2025-01-08",
-      "2025-01-10",
-      "2025-01-20",
-      "2025-01-25",
-      "2025-01-14",
-      "2025-01-06",
-      "2025-01-08",
-      "2025-01-10",
-      "2025-01-20",
-      "2025-01-25",
-      "2025-01-14",
+      "Week 1",
+      "Week 2",
+      "Week 3",
+      "Week 4",
+      "Week 5",
+      "Week 6",
+      "Week 7",
+      "Week 8",
     ],
     axisLabel: {
-      rotate: 45, // Rotates labels to prevent overlap
-      interval: 0, // Show all labels
+      rotate: 45,
+      interval: 0,
+      color: "#5224b5",
+      fontSize: 12,
+    },
+    axisLine: {
+      show: true,
+      lineStyle: {
+        color: "#9AA5BA",
+        width: 1,
+      },
+    },
+    axisTick: {
+      alignWithLabel: true,
     },
   },
   yAxis: {
     type: "value",
-    show: false,
+    axisLabel: {
+      show: false,
+    },
+    axisLine: {
+      show: false,
+    },
+    splitLine: {
+      show: true,
+      lineStyle: {
+        color: "#9AA5BA",
+        type: "dashed",
+        width: 0.5,
+      },
+    },
   },
   grid: {
-    top: "8%",
+    top: "15%",
     left: "2%",
     right: "4%",
     bottom: "15%",
@@ -314,20 +364,35 @@ const option2 = {
   },
   series: [
     {
-      name: "State Data",
-      data: [
-        6, 32, 25, 15, 13, 1, 6, 32, 25, 15, 13, 1, 6, 32, 25, 15, 13, 1, 6, 32,
-        25, 15, 13, 1,
-      ],
+      name: "Doctors",
+      data: [42, 38, 55, 47, 63, 58, 45, 52],
+      type: "bar",
+      barWidth: "40%", // Adjust width for side-by-side bars
       label: {
         show: true,
         position: "top",
         formatter: "{c}",
-        color: "#656565",
+        color: "#5224b5",
+        fontSize: 10,
       },
-      type: "bar",
       itemStyle: {
-        color: "#5224b590",
+        color: "#5224b590", // Purple with 90% opacity
+      },
+    },
+    {
+      name: "Chemists",
+      data: [15, 22, 18, 25, 12, 20, 28, 17],
+      type: "bar",
+      barWidth: "40%", // Adjust width for side-by-side bars
+      label: {
+        show: true,
+        position: "top",
+        formatter: "{c}",
+        color: "#6bb3c2",
+        fontSize: 10,
+      },
+      itemStyle: {
+        color: "#6bb3c290", // Teal with 90% opacity
       },
     },
   ],
